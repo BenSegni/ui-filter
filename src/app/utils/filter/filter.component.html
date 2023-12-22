@@ -1,0 +1,23 @@
+<div class="filter-wrapper">
+    <div class="filter-list-components">
+        <button (click)="showColorFilters()">Filter Color</button>
+        <ul *ngIf="showColors">
+            <li (click)="filterUI(color)" *ngFor="let color of colors">{{ color }}</li>
+        </ul>
+    </div>
+    <div class="filter-list-components">
+        <button (click)="showFruitFilters()">Filter Fruit</button>
+        <ul *ngIf="showFruit">
+            <li (click)="filterUI(option)" *ngFor="let option of fruitOptions">{{ option }}</li>
+        </ul>
+    </div>
+</div>
+<div class="filter-results">
+    Found: {{ this.filteredFruit.length }} items for:
+    <img
+    *ngIf="_global.storedFilterValues().name"
+    [src]="_global.storedFilterValues().name | fruit: _global.storedFilterValues().color"
+    [alt]="_global.storedFilterValues().name"
+    >
+    <span>{{ _global.storedFilterValues().color }} {{ _global.storedFilterValues().name }}</span>
+</div>

@@ -1,0 +1,13 @@
+<h1>Page Two</h1>
+<app-filter></app-filter>
+<div *ngIf="saved" class="saved">
+    <img [src]="_global.storedFruit$().name | fruit: _global.storedFruit$().color" [alt]="_global.storedFruit$().name">
+    <p>A {{ _global.storedFruit$().color }} {{ _global.storedFruit$().name }} has been selected!</p>
+    <a routerLink="../page-three">View it here.</a>
+</div>
+<ul>
+    <li *ngFor="let fruit of _global.fruit$()" [@filteredFruit]="_global.storedFilterValues() | filter: fruit"
+        (click)="storeFruit(fruit)">
+        <img [src]="fruit.name | fruit: fruit.color" [alt]="fruit.name">
+    </li>
+</ul>

@@ -1,0 +1,29 @@
+nav {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    display: flex;
+    padding: 1rem;
+    background-color: #efefef;
+
+    a {
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        color: grey;
+        margin-right: 1rem;
+        border: 1px solid grey;
+        border-radius: .25rem;
+        padding: .5rem 3rem;
+        background-color: white;
+
+        &:hover {
+            background-color: grey;
+            color: white;
+        }
+    }
+}
+
+.content-wrapper {
+    margin-top: 4rem;
+}

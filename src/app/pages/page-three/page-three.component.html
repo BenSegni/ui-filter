@@ -1,0 +1,6 @@
+<div class="result-wrapper"
+    [ngStyle]="{'background-image' : 'url(' + (_global.storedFruit$().name | fruit: _global.storedFruit$().color) + ')'}">
+    <h1>Page Three</h1>
+    <img [src]="_global.storedFruit$().name | fruit: _global.storedFruit$().color" [alt]="_global.storedFruit$().name">
+    <h2>You chose a {{ _global.storedFruit$().color }} {{ _global.storedFruit$().name }}</h2>
+</div>

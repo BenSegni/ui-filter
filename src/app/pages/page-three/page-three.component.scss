@@ -1,0 +1,35 @@
+.result-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    h1 {
+        text-align: center;
+        width: 100%;
+        padding-left: 0;
+        background-color: black;
+        color: white;
+        margin-top: 0;
+    }
+
+    h2 {
+        text-align: center;
+        width: 100%;
+        padding: 2rem 0;
+        background-color: grey;
+        color: white;
+        margin-bottom: 0;
+    }
+
+    img {
+        display: block;
+        height: 40vh;
+        width: auto;
+        border: .5rem solid black;
+        margin: auto;
+        padding: 2rem;
+        object-fit: fill;
+        object-position: center;
+        background-color: white;
+    }
+}
